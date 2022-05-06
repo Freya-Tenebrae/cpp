@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:59:21 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/04/12 00:42:06 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/06 15:29:06 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 
 static void	display_info_table(std::string content)
 {
+	std::string str;
+
 	if (content.size() > 10)
 	{
-		std::cout << std::max(9) << content;
+		str = content;
+		str.resize(9);
+		std::cout << std::setw(9) << str;
 		std::cout << ".";
 	}
 	else
@@ -39,7 +43,10 @@ static void	display_info(Contact c)
 
 PhoneBook::PhoneBook():_n_contact(0)
 {
-	//nothing
+	std::cout << "Thank you for using HBS : the has been phonebook" << std::endl;
+	std::cout << "You can add a contact with the entry 'ADD'" << std::endl;
+	std::cout << "You can search a contact with the entry 'SEARCH" << std::endl;
+	std::cout << "You can quit the phonebook with the entry 'EXIT" << std::endl;
 }
 
 PhoneBook::~PhoneBook()
@@ -73,11 +80,12 @@ void	PhoneBook::search()
 {
 	int			i;
 	std::string	index;
+
 	i = 0;
 	std::cout << "/-------------------------------------------\\" << std::endl;
 	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
 	std::cout << "|----------|----------|----------|----------|" << std::endl;
-	while (i++ < this->_n_contact)
+	while (i++ < this->_n_contact && i < 9)
 	{
 		std::cout << "|         " << i - 1 << "|";
 		display_info_table(this->_contact_list[i - 1].get_first_name());
@@ -95,7 +103,7 @@ void	PhoneBook::search()
 		std::cout << "Enter the index of the contact : ";
 		getline(std::cin, index);
 		std::istringstream(index) >> i;
-		if (i < this->_n_contact)
+		if (index[0] >= '0' && index[0] <= '9' && i >= 0 && i < this->_n_contact)
 			display_info(this->_contact_list[i]);
 		else
 			std::cout << "This contact didn't exist" << std::endl;
