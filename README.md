@@ -1,4 +1,4 @@
-# Philosophers
+# CPP
 
 This Repositorie contains my solution to the piscine `cpp` of 42 (Paris).
 
