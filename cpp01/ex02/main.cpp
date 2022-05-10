@@ -6,12 +6,12 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:45:33 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/09 16:29:53 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/10 16:58:44 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <string>
-# include <iostream>
+#include <string>
+#include <iostream>
 
 int main(void)
 {
