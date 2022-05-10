@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:45:33 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/09 17:19:06 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/10 16:14:07 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class HumanA
 		Weapon				&_weapon;
 
 	public:
-		HumanA(std::string name, Weapon weapon);
+		HumanA(std::string name, Weapon &weapon);
 		~HumanA();
 
 		void	attack();

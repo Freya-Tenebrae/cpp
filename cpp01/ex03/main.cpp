@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:45:33 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/09 18:18:14 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/10 16:05:08 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,13 @@ int main()
 		jim.attack();
 		club.setType("some other type of club");
 		jim.attack();
+	}
+	{
+		Weapon hexblade = Weapon("shiny shortsword");
+		HumanA arik("Arik", hexblade);
+		arik.attack();
+		hexblade.setType("heavy claymore");
+		arik.attack();
 	}
 	{
 		Weapon bow = Weapon("melodic bow");
