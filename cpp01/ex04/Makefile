@@ -6,15 +6,15 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2022/05/10 17:29:42 by cmaginot         ###   ########.fr        #
+#    Updated: 2022/05/11 09:59:34 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=sed_is_for_looser
 
-SRCS=main.cpp Switch.cpp Show.cpp
+SRCS=main.cpp Switch.cpp
 OBJS=$(SRCS:.cpp=.o)
-INCLUDES=Switch.hpp Show.hpp
+INCLUDES=Switch.hpp
 
 CC=clang++
 CFLAGS=-Wall -Wextra -Werror -std=c++98 -g3
