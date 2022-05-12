@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 15:37:08 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/06 17:53:06 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/12 13:07:02 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ bool	Account::makeWithdrawal( int withdrawal )
 		std::cout << std::endl;
 		return(0);
 	}
-	std::cout << ";refused" << std::endl;
+	std::cout << ":refused" << std::endl;
 	return(1);
 }
 
