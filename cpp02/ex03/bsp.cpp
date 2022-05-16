@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 18:39:27 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/16 20:51:33 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/16 20:53:16 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,3 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
 		return (false);
 	return !(has_neg && has_pos);
 }
-
-// Pour conclure, implémentez la fonction suivante dans le fichier correspondant :
-// bool bsp( Point const a, Point const b, Point const c, Point const point);
-// • a, b, c : Les sommets de notre cher triangle.
-// • point : Le point à évaluer.
-// • Retourne : True si le point est à l’intérieur du triangle. False dans le cas 
-// contraire. Cela veut dire que, si le point est un sommet ou placé sur une 
-// arrête, la fonction retournera False.
-// Écrivez et rendez vos propres tests afin de démontrer que votre classe fonctionne
-// comme demandé.
