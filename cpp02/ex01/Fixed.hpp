@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/13 18:12:40 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/16 16:11:17 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string>
 # include <iostream>
+# include <cmath>
 
 class Fixed
 {
@@ -38,6 +39,6 @@ class Fixed
 		Fixed	&operator=(const Fixed &f);
 };//!Fixed
 
-void	&operator<<(const Fixed &f);
+std::ostream	&operator<<(std::ostream &output, const Fixed &f);
 
 #endif

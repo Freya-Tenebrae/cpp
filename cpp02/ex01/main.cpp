@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:35 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/13 19:11:06 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/16 16:20:43 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,40 +15,19 @@
 int main(int argc, char const *argv[])
 {
 	Fixed a;
-	Fixed const b( 10 );
-	Fixed const c( 42.42f );
-	Fixed const d( b );
+	Fixed const b(10);
+	Fixed const c(42.42f);
+	Fixed const d(b);
 
-	a = Fixed( 1234.4321f );
+	a = Fixed(1234.4321f);
 
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
+	std::cout << "a is " << a  << " as float" << std::endl;
+	std::cout << "b is " << b  << " as float" << std::endl;
+	std::cout << "c is " << c  << " as float" << std::endl;
+	std::cout << "d is " << d  << " as float" << std::endl;
 	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
 	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
 	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 	return (0);
 }
-
-// Default constructor called
-// Int constructor called
-// Float constructor called
-// Copy constructor called
-// Copy assignment operator called
-// Float constructor called
-// Copy assignment operator called
-// Destructor called
-// a is 1234.43
-// b is 10
-// c is 42.4219
-// d is 10
-// a is 1234 as integer
-// b is 10 as integer
-// c is 42 as integer
-// d is 10 as integer
-// Destructor called
-// Destructor called
-// Destructor called
-// Destructor called

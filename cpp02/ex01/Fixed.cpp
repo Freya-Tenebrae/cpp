@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/13 19:11:01 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/16 16:22:21 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,13 @@ Fixed::Fixed(const Fixed &f)
 Fixed::Fixed(int const raw)
 {
 	std::cout << "\033[0;35mInt constructor called\033[0m" << std::endl;
-// • Un constructeur prenant un entier constant en paramètre et qui convertit 
-// 	celuici en virgule fixe. Le nombre de bits de la partie fractionnaire est 
-// 	initialisé à 8 comme dans l’exercice 00.
+	_rawBits = raw << _number;
 }
 
 Fixed::Fixed(float const raw)
 {
-	std::cout << "\033[0;Float constructor called\033[0m" << std::endl;
-// • Un constructeur prenant un flottant constant en paramètre et qui convertit
-// 	celui-ci en virgule fixe. Le nombre de bits de la partie fractionnaire est 
-// 	initialisé à 8 comme dans l’exercice 00.
+	std::cout << "\033[0;35mFloat constructor called\033[0m" << std::endl;
+	_rawBits = roundf(raw * (1 << _number));
 }
 
 
@@ -59,20 +55,18 @@ void	Fixed::setRawBits(int const raw)
 	_rawBits = raw;
 }
 
-float	Fixed::toFloat(void) const
-{
-	std::cout << "\033[0;35mtoFloat member function called\033[0m";
-	std::cout << std::endl;
-// • Une fonction membre float toFloat( void ) const;
-// 	qui convertit la valeur en virgule fixe en nombre à virgule flottante.
-}
-
 int		Fixed::toInt(void) const
 {
-	std::cout << "\033[0;35mtoInt member function called\033[0m";
-	std::cout << std::endl;
-// • Une fonction membre int toInt( void ) const;
-// 	qui convertit la valeur en virgule fixe en nombre entier.
+	// std::cout << "\033[0;35mtoInt member function called\033[0m";
+	// std::cout << std::endl;
+	return (_rawBits >> _number);
+}
+
+float	Fixed::toFloat(void) const
+{
+	// std::cout << "\033[0;35mtoFloat member function called\033[0m";
+	// std::cout << std::endl;
+	return (_rawBits / (float)(1 << _number));
 }
 
 
@@ -84,9 +78,8 @@ Fixed &Fixed::operator=(const Fixed &f)
 	return (*this);
 }
 
-void	&operator<<(const Fixed &f)
+std::ostream	&operator<<(std::ostream &output, const Fixed &f)
 {
-// • Une surcharge de l’opérateur d’insertion («) qui insère une représentation 
-// 	en virgule flottante du nombre à virgule fixe dans le flux de sortie 
-// 	(objet output stream)passé en paramètre.	
+	output << f.toFloat();
+	return (output);	
 }
