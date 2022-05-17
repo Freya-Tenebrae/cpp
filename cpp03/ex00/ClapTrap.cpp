@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 17:45:46 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/17 18:38:24 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,7 @@ void	ClapTrap::attack(const std::string& target)
 		std::cout << getName() << " : \"";
 		std::cout << "\033[0;35mTake that!\033[0m\"" << std::endl;
 		std::cout << getName() << " attacks " << target << ", causing ";
-		std::cout << "\033[0;31m" << _attackDamage;
+		std::cout << "\033[0;31m" << getAttackDamage();
 		std::cout << "\033[0m points of damage!" << std::endl;
 	}
 }
@@ -160,7 +160,7 @@ void	ClapTrap::repair()
 	else if (getEnergyPoint() <= 0)
 	{
 		std::cout << getName() << " : \"";
-		std::cout << "\033[0;35mThis could've gone better!\033[0m\"";
+		std::cout << "\033[0;35mNo fair! I wasn't ready.\033[0m\"";
 		std::cout << std::endl;
 		std::cout << getName() << " tried to repaired himself but fall on the ";
 		std::cout << "ground out of ennergy." << std::endl;
@@ -168,7 +168,7 @@ void	ClapTrap::repair()
 	else
 	{
 		setEnergyPoint(getEnergyPoint() -1);
-		beRepaired(_repairValue);
+		beRepaired((getRepairValue()));
 	}
 }
 
