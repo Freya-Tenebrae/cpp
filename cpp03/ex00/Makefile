@@ -6,11 +6,11 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2022/05/17 14:38:48 by cmaginot         ###   ########.fr        #
+#    Updated: 2022/05/17 17:47:15 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=a.out
+NAME=clapTrap
 
 SRCS=main.cpp ClapTrap.cpp
 OBJS=$(SRCS:.cpp=.o)
