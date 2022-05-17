@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 18:42:46 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/17 18:54:59 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,4 +133,14 @@ void	ScavTrap::beRepaired(unsigned int amount)
 	std::cout << std::endl;
 	std::cout << getName() << " is repaired for \033[0;32m";
 	std::cout << amount << "\033[0m hit point!" << std::endl;
+}
+
+void	ScavTrap::guardGate()
+{
+	std::cout << getName() << " : \"";
+	std::cout << "\033[0;35mI can do more than guard a gate! We CL4P-TP units";
+	std::cout << " can be programmed to do anything from open doors to ";
+	std::cout << "ninja-sassinate highly important Janitory officals!?";
+	std::cout << "\033[0m\"" << std::endl;
+	std::cout << getName() << " are now a Gate Keeper" << std::endl;
 }

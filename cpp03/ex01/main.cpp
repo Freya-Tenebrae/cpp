@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 18:28:14 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/17 18:54:35 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int main(int argc, char const *argv[])
 	s2.attack("Jack");
 	s2.takeDamage(10);
 	s2.repair();
+	s2.guardGate();
 	std::cout << s2 << std::endl;
 
 	std::cout << s3 << std::endl;
