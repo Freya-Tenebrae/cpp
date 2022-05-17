@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 18:39:27 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 14:27:54 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/17 14:30:18 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ float sign(Point const point, Point const a, Point const b)
 bool bsp(Point const a, Point const b, Point const c, Point const point)
 {
 	float d1, d2, d3;
-	bool has_neg, has_pos;
 	// std::cout << std::endl;
 	d1 = sign(point, a, b);
 	d2 = sign(point, b, c);

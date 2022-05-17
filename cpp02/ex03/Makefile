@@ -6,11 +6,11 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2022/05/16 20:09:13 by cmaginot         ###   ########.fr        #
+#    Updated: 2022/05/17 14:31:52 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=a.out
+NAME=bsp
 
 SRCS=main.cpp bsp.cpp Point.cpp Fixed.cpp
 OBJS=$(SRCS:.cpp=.o)
