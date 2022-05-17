@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 18:38:24 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/17 19:26:35 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ClapTrap::ClapTrap():_name("Nameless Claptrap")
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mMinion?\033[0m\"" << std::endl;
 	std::cout << "A nameless Claptrap is constructed... ";
-	std::cout << "Give him a name or he'll be sad." << std::endl;
+	std::cout << "Give it a name or it'll be sad." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &clapTrap)
@@ -39,7 +39,7 @@ ClapTrap::ClapTrap(const std::string name):_name(name)
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mMinion!\033[0m\"" << std::endl;
 	std::cout << getName() << " is constructed... ";
-	std::cout << "Be ready to become his \"minion\"" << std::endl;
+	std::cout << "Be ready to become it's \"minion\"" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
@@ -124,9 +124,9 @@ void	ClapTrap::attack(const std::string& target)
 	if (getHitPoint() <= 0)
 	{
 		std::cout << getName() << " : \"";
-		std::cout << "\033[0;35mevent unconscious I'll not stop talking!\"";
+		std::cout << "\033[0;35mEvent unconscious I'll not stop talking!\"";
 		std::cout << "\033[0m" << std::endl;
-		std::cout << getName() << " is unconscious, he cannot attack";
+		std::cout << getName() << " is unconscious, it cannot attack";
 		std::cout << std::endl;
 	}
 	else if (getEnergyPoint() <= 0)
@@ -152,9 +152,9 @@ void	ClapTrap::repair()
 	if (getHitPoint() <= 0)
 	{
 		std::cout << getName() << " : \"";
-		std::cout << "\033[0;35mevent unconscious I'll not stop talking!\"";
+		std::cout << "\033[0;35mEvent unconscious I'll not stop talking!\"";
 		std::cout << "\033[0m" << std::endl;
-		std::cout << getName() << " is unconscious, he cannot repaired himself";
+		std::cout << getName() << " is unconscious, it cannot repaired itself";
 		std::cout << std::endl;
 	}
 	else if (getEnergyPoint() <= 0)
@@ -162,7 +162,7 @@ void	ClapTrap::repair()
 		std::cout << getName() << " : \"";
 		std::cout << "\033[0;35mNo fair! I wasn't ready.\033[0m\"";
 		std::cout << std::endl;
-		std::cout << getName() << " tried to repaired himself but fall on the ";
+		std::cout << getName() << " tried to repaired itself but fall on the ";
 		std::cout << "ground out of ennergy." << std::endl;
 	}
 	else
@@ -197,7 +197,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 
 std::ostream	&operator<<(std::ostream &output, ClapTrap &ct)
 {
-	output << ct.getName() << " have \033[0;31m" << ct.getHitPoint();
+	output << ct.getName() << " : \033[0;31m" << ct.getHitPoint();
 	output << "HP\033[0m, \033[0;34m" << ct.getEnergyPoint();
 	output << " EP\033[0m, \033[0;33m";
 	output << ct.getAttackDamage() << "AD\033[0m, \033[0;36m";

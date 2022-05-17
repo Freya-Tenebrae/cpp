@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 18:54:59 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/17 19:29:32 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ScavTrap::ScavTrap():ClapTrap()
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mWhere is my name Minion ?!\033[0m\"" << std::endl;
 	std::cout << "A nameless ScavTrap is constructed... ";
-	std::cout << "Give him a name or he'll be realy mad." << std::endl;
+	std::cout << "Give it a name or it'll be realy mad." << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &ScavTrap)
@@ -47,7 +47,7 @@ ScavTrap::ScavTrap(const std::string name):ClapTrap(name)
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mMinion, why did you run?\033[0m\"" << std::endl;
 	std::cout << getName() << " is constructed... ";
-	std::cout << "Maybe he'll let you alone if you run far away" << std::endl;
+	std::cout << "Maybe it'll let you alone if you run far away" << std::endl;
 }
 
 ScavTrap::~ScavTrap()
@@ -69,7 +69,7 @@ void	ScavTrap::attack(const std::string& target)
 		std::cout << getName() << " : \"";
 		std::cout << "\033[0;35mThis could've gone better!\"";
 		std::cout << "\033[0m" << std::endl;
-		std::cout << getName() << " is unconscious, he cannot attack";
+		std::cout << getName() << " is unconscious, it cannot attack";
 		std::cout << std::endl;
 	}
 	else if (getEnergyPoint() <= 0)
@@ -97,7 +97,7 @@ void	ScavTrap::repair()
 		std::cout << getName() << " : \"";
 		std::cout << "\033[0;35mThis could've gone better!\"";
 		std::cout << "\033[0m" << std::endl;
-		std::cout << getName() << " is unconscious, he cannot repaired himself";
+		std::cout << getName() << " is unconscious, it cannot repaired himself";
 		std::cout << std::endl;
 	}
 	else if (getEnergyPoint() <= 0)
