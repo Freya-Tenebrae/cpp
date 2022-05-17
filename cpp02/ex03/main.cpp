@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/16 20:49:31 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/05/17 14:28:42 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int main(int argc, char const *argv[])
 	Point h;				// outside
 	Point i(5, 5);			// outside
 	Point j(1.5f, 1.8f);	// inside
-	Point k(1.5f, 2);	// outside
+	Point k(1.5f, 2);		// outside
 	h = e;
 
 	std::cout << "\033[1;36mVariables :\033[0m" << std::endl;
