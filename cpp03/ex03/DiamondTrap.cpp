@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 19:46:09 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 20:10:38 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:04:11 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 /* ************************************************************************** */
 DiamondTrap::DiamondTrap()
 {
-	setHitPoint(FragTrap::getHitPoint());
-	setEnergyPoint(ScavTrap::getEnergyPoint());
-	setAttackDamage(FragTrap::getAttackDamage());
-	setRepairValue(ScavTrap::getRepairValue());
+	this->ClapTrap::setHitPoint(FragTrap::getHitPoint());
+	this->ClapTrap::setEnergyPoint(ScavTrap::getEnergyPoint());
+	this->ClapTrap::setAttackDamage(FragTrap::getAttackDamage());
+	this->ClapTrap::setRepairValue(ScavTrap::getRepairValue());
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &diamondTrap)
@@ -31,11 +31,11 @@ DiamondTrap::DiamondTrap(const DiamondTrap &diamondTrap)
 DiamondTrap::DiamondTrap(const std::string name)
 {
 	ClapTrap::setName(name + "_clap_name");
-	setName(name);
-	setHitPoint(FragTrap::getHitPoint());
-	setEnergyPoint(ScavTrap::getEnergyPoint());
-	setAttackDamage(FragTrap::getAttackDamage());
-	setRepairValue(ScavTrap::getRepairValue());
+	this->_name = name;
+	this->ClapTrap::setHitPoint(FragTrap::getHitPoint());
+	this->ClapTrap::setEnergyPoint(ScavTrap::getEnergyPoint());
+	this->ClapTrap::setAttackDamage(FragTrap::getAttackDamage());
+	this->ClapTrap::setRepairValue(ScavTrap::getRepairValue());
 }
 
 DiamondTrap::~DiamondTrap()
@@ -46,6 +46,16 @@ DiamondTrap::~DiamondTrap()
 /* ************************************************************************** */
 /* GETTER & SETTER                                                            */
 /* ************************************************************************** */
+std::string const	DiamondTrap::getName()
+{
+	return(this->_name);
+}
+
+void	DiamondTrap::setName(std::string const name)
+{
+	ClapTrap::setName(name + "_clap_name");
+	this->_name = name;
+}
 
 /* ************************************************************************** */
 /* MEMBER FUNCTION                                                            */
@@ -72,10 +82,10 @@ void	DiamondTrap::beRepaired(unsigned int amount)
 
 void	DiamondTrap::whoAmI()
 {
-	std::cout << getName() << " : \"";
-	std::cout << "\033[0;35mIf my name is " << getName() << ", and my ClapTrap";
-	std::cout << " name is" << ClapTrap::getName() << ", who am i ???";
-	std::cout << "\033[0m\"" << std::endl;
-	std::cout << getName() << " questionned itself another time";
-	std::cout << std::endl;
+	std::cout << ClapTrap::getName() << " : \"";
+	std::cout << "\033[0;35mIf my name is " << this->getName();
+	std::cout << ", and my ClapTrap name is" << ClapTrap::getName();
+	std::cout << ", who am i ???" << "\033[0m\"" << std::endl;
+	std::cout << ClapTrap::getName() << " questionned itself for the 5th";
+	std::cout << " time today" << std::endl;
 }

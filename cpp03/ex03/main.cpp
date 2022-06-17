@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 20:15:31 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:04:20 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
 	DiamondTrap d1("Helrindhal");
 	DiamondTrap d2(d1);
 	DiamondTrap d3;
-	d3.setName("yuki");
+	d3.DiamondTrap::setName("yuki");
 
 	// std::cout << c1 << std::endl;
 	// std::cout << c2 << std::endl;

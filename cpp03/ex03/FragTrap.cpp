@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 19:33:39 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/06/17 15:56:58 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ FragTrap::FragTrap():ClapTrap()
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mIf i didn't have a name ... did i really exists ?!";
 	std::cout << "\033[0m\"" << std::endl;
-	std::cout << "A nameless ScavTrap is constructed... ";
+	std::cout << "A nameless FragTrap is constructed... ";
 	std::cout << "Give it a name or it'll be realy chaotic." << std::endl;
 }
 

@@ -6,7 +6,7 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2022/05/17 19:41:48 by cmaginot         ###   ########.fr        #
+#    Updated: 2022/06/17 15:30:13 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ OBJS=$(SRCS:.cpp=.o)
 INCLUDES=DiamondTrap.cpp FragTrap.hpp ScavTrap.hpp ClapTrap.cpp
 
 CC=clang++
-CFLAGS=-Wall -Wextra -Werror -std=c++98 -g3
+CFLAGS=-Wall -Wextra -Werror -Wshadow -std=c++98 -g3
 
 RM=rm -f
 
