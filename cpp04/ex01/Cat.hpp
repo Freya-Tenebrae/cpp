@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 14:55:51 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/07/26 19:56:14 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,21 @@
 # include <string>
 # include <iostream>
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Cat : public Animal
 {
+	private:
+		Brain* _brain;
+
 	public:
 		Cat();
 		Cat(const Cat &cat);
 		~Cat();
-		Cat				&operator=(const Cat &cat);
+		virtual Cat			&operator=(const Cat &cat);
+
+		virtual std::string const	getIdea(int i)const;
+		virtual void				setIdea(std::string const idea, int i);
 
 		virtual void	makeSound()const;
 

@@ -1,66 +1,61 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 19:04:10 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/07/26 20:13:54 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Brain.hpp"
 
 /* ************************************************************************** */
 /* CONSTRUCTOR & DESTRUCTOR                                                   */
 /* ************************************************************************** */
 
-Dog::Dog()
+Brain::Brain()
 {
-	this->setType("Dog");
-	_brain = new Brain();
-	std::cout << "\033[0;35mA Dog is created\033[0m" << std::endl;
+	std::cout << "\033[0;35mA Brain is created\033[0m" << std::endl;
+	for (int i = 0; i < 100; i++)
+		_ideas[i] = "";
 }
 
-Dog::Dog(const Dog &dog)
+Brain::Brain(const Brain &brain)
 {
-	(*this) = dog;
-	std::cout << "\033[0;35mA Dog is copied\033[0m" << std::endl;
+	(*this) = brain;
+	std::cout << "\033[0;35mA Brain is copied\033[0m" << std::endl;
 }
 
-Dog::~Dog()
+Brain::~Brain()
 {
-	delete this->_brain;
-	std::cout << "\033[0;35mA Dog is destroyed\033[0m" << std::endl;
+	std::cout << "\033[0;35mA Brain is destroyed\033[0m" << std::endl;
 }
 
-Dog &Dog::operator=(const Dog &dog)
+Brain &Brain::operator=(const Brain &brain)
 {
-	std::cout << "\033[0;35mA Dog is copied (operator =)\033[0m";
+	std::cout << "\033[0;35mA Brain is copied (operator =)\033[0m";
 	std::cout << std::endl;
-	this->setType(dog.getType());
+	for (int i = 0; i < 100; i++)
+		this->setIdea(brain.getIdea(i), i);
 	return (*this);
 }
 
 /* ************************************************************************** */
 /* GETTER & SETTER                                                            */
 /* ************************************************************************** */
-
-std::string const	Dog::getIdea(int i)const
+std::string const	Brain::getIdea(int i) const
 {
-	return (_brain->getIdea(i));
+	if (i < 0 || i >= 100)
+		return ("");
+	else
+		return(_ideas[i]);
 }
 
-void	Dog::setIdea(std::string const idea, int i)
+void	Brain::setIdea(std::string const idea, int i)
 {
-	_brain->setIdea(idea, i);
-}
-
-/* ************************************************************************** */
-/* MEMBER FUNCTION                                                            */
-/* ************************************************************************** */
-void	Dog::makeSound() const
-{
-	std::cout << "'Woof'" << std::endl;
+	if (i >= 0 && i < 100)
+		_ideas[i] = idea;
 }

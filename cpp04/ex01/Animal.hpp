@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 14:56:02 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/07/26 20:08:05 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Animal
 	public:
 		Animal();
 		Animal(const Animal &animal);
-		~Animal();
-		Animal				&operator=(const Animal &animal);
+		virtual ~Animal();
+		virtual Animal		&operator=(const Animal &animal);
 
 		std::string const	getType()const;
 		void				setType(std::string const type);
