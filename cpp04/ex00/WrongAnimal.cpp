@@ -1,54 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 14:56:59 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/07/26 14:50:21 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
 /* ************************************************************************** */
 /* CONSTRUCTOR & DESTRUCTOR                                                   */
 /* ************************************************************************** */
 
-Animal::Animal():_type("none")
+WrongAnimal::WrongAnimal():_type("none")
 {
-	std::cout << "\033[0;35mAn Animal is created\033[0m" << std::endl;
+	std::cout << "\033[0;35mAn WrongAnimal is created\033[0m" << std::endl;
 }
 
-Animal::Animal(const Animal &animal)
+WrongAnimal::WrongAnimal(const WrongAnimal &WrongAnimal)
 {
-	(*this) = animal;
-	std::cout << "\033[0;35mAn Animal is copied\033[0m" << std::endl;
+	(*this) = WrongAnimal;
+	std::cout << "\033[0;35mAn WrongAnimal is copied\033[0m" << std::endl;
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
-	std::cout << "\033[0;35mAn Animal is destroyed\033[0m" << std::endl;
+	std::cout << "\033[0;35mAn WrongAnimal is destroyed\033[0m" << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &animal)
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &WrongAnimal)
 {
-	std::cout << "\033[0;35mAn Animal is copied (operator =)\033[0m";
+	std::cout << "\033[0;35mAn WrongAnimal is copied (operator =)\033[0m";
 	std::cout << std::endl;
-	this->setType(animal.getType());
+	this->setType(WrongAnimal.getType());
 	return (*this);
 }
 
 /* ************************************************************************** */
 /* GETTER & SETTER                                                            */
 /* ************************************************************************** */
-std::string const	Animal::getType() const
+std::string const	WrongAnimal::getType() const
 {
 	return(_type);
 }
 
-void	Animal::setType(std::string const type)
+void	WrongAnimal::setType(std::string const type)
 {
 	_type = type;
 }
@@ -56,7 +56,7 @@ void	Animal::setType(std::string const type)
 /* ************************************************************************** */
 /* MEMBER FUNCTION                                                            */
 /* ************************************************************************** */
-void	Animal::makeSound() const
+void	WrongAnimal::makeSound() const
 {
-	std::cout << "'...'" << std::endl;
+	std::cout << "'bip bip bip'" << std::endl;
 }

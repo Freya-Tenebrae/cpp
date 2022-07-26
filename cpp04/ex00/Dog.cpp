@@ -1,62 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 14:56:59 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/07/26 14:56:51 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Dog.hpp"
 
 /* ************************************************************************** */
 /* CONSTRUCTOR & DESTRUCTOR                                                   */
 /* ************************************************************************** */
 
-Animal::Animal():_type("none")
+Dog::Dog()
 {
-	std::cout << "\033[0;35mAn Animal is created\033[0m" << std::endl;
+	this->setType("Dog");
+	std::cout << "\033[0;35mA Cat is created\033[0m" << std::endl;
 }
 
-Animal::Animal(const Animal &animal)
+Dog::Dog(const Dog &dog)
 {
-	(*this) = animal;
-	std::cout << "\033[0;35mAn Animal is copied\033[0m" << std::endl;
+	(*this) = dog;
+	std::cout << "\033[0;35mA Cat is copied\033[0m" << std::endl;
 }
 
-Animal::~Animal()
+Dog::~Dog()
 {
-	std::cout << "\033[0;35mAn Animal is destroyed\033[0m" << std::endl;
+	std::cout << "\033[0;35mA Cat is destroyed\033[0m" << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &animal)
+Dog &Dog::operator=(const Dog &dog)
 {
-	std::cout << "\033[0;35mAn Animal is copied (operator =)\033[0m";
+	std::cout << "\033[0;35mA Cat is copied (operator =)\033[0m";
 	std::cout << std::endl;
-	this->setType(animal.getType());
+	this->setType(dog.getType());
 	return (*this);
-}
-
-/* ************************************************************************** */
-/* GETTER & SETTER                                                            */
-/* ************************************************************************** */
-std::string const	Animal::getType() const
-{
-	return(_type);
-}
-
-void	Animal::setType(std::string const type)
-{
-	_type = type;
 }
 
 /* ************************************************************************** */
 /* MEMBER FUNCTION                                                            */
 /* ************************************************************************** */
-void	Animal::makeSound() const
+void	Dog::makeSound() const
 {
-	std::cout << "'...'" << std::endl;
+	std::cout << "'Woof'" << std::endl;
 }

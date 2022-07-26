@@ -1,62 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 14:56:59 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/07/26 14:50:07 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongCat.hpp"
 
 /* ************************************************************************** */
 /* CONSTRUCTOR & DESTRUCTOR                                                   */
 /* ************************************************************************** */
 
-Animal::Animal():_type("none")
+WrongCat::WrongCat()
 {
-	std::cout << "\033[0;35mAn Animal is created\033[0m" << std::endl;
+	this->setType("WrongCat");
+	std::cout << "\033[0;35mA WrongCat is created\033[0m" << std::endl;
 }
 
-Animal::Animal(const Animal &animal)
+WrongCat::WrongCat(const WrongCat &wrongCat)
 {
-	(*this) = animal;
-	std::cout << "\033[0;35mAn Animal is copied\033[0m" << std::endl;
+	(*this) = wrongCat;
+	std::cout << "\033[0;35mA WrongCat is copied\033[0m" << std::endl;
 }
 
-Animal::~Animal()
+WrongCat::~WrongCat()
 {
-	std::cout << "\033[0;35mAn Animal is destroyed\033[0m" << std::endl;
+	std::cout << "\033[0;35mA WrongCat is destroyed\033[0m" << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &animal)
+WrongCat &WrongCat::operator=(const WrongCat &wrongCat)
 {
-	std::cout << "\033[0;35mAn Animal is copied (operator =)\033[0m";
+	std::cout << "\033[0;35mA WrongCat is copied (operator =)\033[0m";
 	std::cout << std::endl;
-	this->setType(animal.getType());
+	this->setType(wrongCat.getType());
 	return (*this);
-}
-
-/* ************************************************************************** */
-/* GETTER & SETTER                                                            */
-/* ************************************************************************** */
-std::string const	Animal::getType() const
-{
-	return(_type);
-}
-
-void	Animal::setType(std::string const type)
-{
-	_type = type;
 }
 
 /* ************************************************************************** */
 /* MEMBER FUNCTION                                                            */
 /* ************************************************************************** */
-void	Animal::makeSound() const
+void	WrongCat::makeSound() const
 {
-	std::cout << "'...'" << std::endl;
+	std::cout << "'M e o w'" << std::endl;
 }
