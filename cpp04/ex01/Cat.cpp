@@ -1,50 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 15:06:41 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/07/26 14:56:54 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
 /* ************************************************************************** */
 /* CONSTRUCTOR & DESTRUCTOR                                                   */
 /* ************************************************************************** */
 
-Dog::Dog()
+Cat::Cat()
 {
-	this->setType("Dog");
-	std::cout << "\033[0;35mA Dog is created\033[0m" << std::endl;
+	this->setType("Cat");
+	std::cout << "\033[0;35mA Cat is created\033[0m" << std::endl;
 }
 
-Dog::Dog(const Dog &dog)
+Cat::Cat(const Cat &cat)
 {
-	(*this) = dog;
-	std::cout << "\033[0;35mA Dog is copied\033[0m" << std::endl;
+	(*this) = cat;
+	std::cout << "\033[0;35mA Cat is copied\033[0m" << std::endl;
 }
 
-Dog::~Dog()
+Cat::~Cat()
 {
-	std::cout << "\033[0;35mA Dog is destroyed\033[0m" << std::endl;
+	std::cout << "\033[0;35mA Cat is destroyed\033[0m" << std::endl;
 }
 
-Dog &Dog::operator=(const Dog &dog)
+Cat &Cat::operator=(const Cat &cat)
 {
-	std::cout << "\033[0;35mA Dog is copied (operator =)\033[0m";
+	std::cout << "\033[0;35mA Cat is copied (operator =)\033[0m";
 	std::cout << std::endl;
-	this->setType(dog.getType());
+	this->setType(cat.getType());
 	return (*this);
 }
 
 /* ************************************************************************** */
 /* MEMBER FUNCTION                                                            */
 /* ************************************************************************** */
-void	Dog::makeSound() const
+void	Cat::makeSound() const
 {
-	std::cout << "'Woof'" << std::endl;
+	std::cout << "'Meow'" << std::endl;
 }
