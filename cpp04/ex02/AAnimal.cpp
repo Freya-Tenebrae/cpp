@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 20:36:04 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/07/26 20:38:53 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,4 @@ std::string const	AAnimal::getType() const
 void	AAnimal::setType(std::string const type)
 {
 	_type = type;
-}
-
-/* ************************************************************************** */
-/* MEMBER FUNCTION                                                            */
-/* ************************************************************************** */
-void	AAnimal::makeSound() const
-{
-	std::cout << "'...'" << std::endl;
 }
