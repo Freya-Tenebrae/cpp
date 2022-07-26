@@ -6,11 +6,13 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 14:25:26 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/07/26 14:38:29 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
 
 int main(int argc, char const *argv[])
 {
