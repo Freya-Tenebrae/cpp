@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/06/17 15:57:07 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/08 13:29:02 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ScavTrap::ScavTrap():ClapTrap()
 	setRepairValue(25);
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mWhere is my name Minion ?!\033[0m\"" << std::endl;
-	std::cout << "A nameless FragTrap is constructed... ";
+	std::cout << "A nameless ScavTrap is constructed... ";
 	std::cout << "Give it a name or it'll be realy mad." << std::endl;
 }
 
@@ -33,7 +33,7 @@ ScavTrap::ScavTrap(const ScavTrap &ScavTrap)
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mI will prove to you my robotic superiority!";
 	std::cout << "\033[0m\";" << std::endl;
-	std::cout << getName();
+	std::cout << getName() << " (ScavTrap)";
 	std::cout << " is dulicated ... now they'll fight each others ?!";
 	std::cout << std::endl;
 }
@@ -46,7 +46,7 @@ ScavTrap::ScavTrap(const std::string name):ClapTrap(name)
 	setRepairValue(25);
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mMinion, why did you run?\033[0m\"" << std::endl;
-	std::cout << getName() << " is constructed... ";
+	std::cout << getName() << " (ScavTrap) is constructed... ";
 	std::cout << "Maybe it'll let you alone if you run far away" << std::endl;
 }
 
@@ -55,7 +55,7 @@ ScavTrap::~ScavTrap()
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mCrap happens.\033[0m\"";
 	std::cout << std::endl;
-	std::cout << getName() << " have beed broken";
+	std::cout << getName() << " (ScavTrap) have beed broken";
 	std::cout << std::endl;
 }
 
@@ -113,26 +113,6 @@ void	ScavTrap::repair()
 		setEnergyPoint(getEnergyPoint() -1);
 		beRepaired(getRepairValue());
 	}
-}
-
-void	ScavTrap::takeDamage(unsigned int amount)
-{
-	setHitPoint(getHitPoint() - amount);
-	std::cout << getName() << " : \"";
-	std::cout << "\033[0;35mOw hohoho, that hurts! Yipes!\033[0m\"";
-	std::cout << std::endl;
-	std::cout << getName() << " take \033[0;31m" << amount;
-	std::cout << "\033[0m hit point!" << std::endl;
-}
-
-void	ScavTrap::beRepaired(unsigned int amount)
-{
-	setHitPoint(getHitPoint() + amount);
-	std::cout << getName() << " : \"";
-	std::cout << "\033[0;35mHealth! Ooo, what flavor is red?!\033[0m\"";
-	std::cout << std::endl;
-	std::cout << getName() << " is repaired for \033[0;32m";
-	std::cout << amount << "\033[0m hit point!" << std::endl;
 }
 
 void	ScavTrap::guardGate()

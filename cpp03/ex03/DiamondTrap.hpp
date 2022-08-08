@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 19:46:09 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 20:00:21 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/08 13:32:04 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ class DiamondTrap : public ScavTrap, public FragTrap
 		/* ****************************************************************** */
 		void	attack(const std::string& target);
 		void	repair();
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
 		void	whoAmI();
 
 };//!DiamondTrap

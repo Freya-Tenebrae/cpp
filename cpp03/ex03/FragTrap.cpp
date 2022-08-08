@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/06/17 15:56:58 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/08 13:30:50 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ FragTrap::FragTrap(const FragTrap &fragTrap)
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mRegular battle! Or, you know... dance battle.";
 	std::cout << "\033[0m\";" << std::endl;
-	std::cout << getName();
+	std::cout << getName() << " (FragTrap)";
 	std::cout << " is dulicated ... now they'll fight in a dance battle...";
 	std::cout << std::endl;
 }
@@ -48,7 +48,7 @@ FragTrap::FragTrap(const std::string name):ClapTrap(name)
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mStair ?! ... NOOOOOOOooooooo ... minion?! ";
 	std::cout << "come baaaaaaack\033[0m\"" << std::endl;
-	std::cout << getName() << " is constructed... ";
+	std::cout << getName() << " (FragTrap) is constructed... ";
 	std::cout << "Maybe you'll lose it if you take a stair" << std::endl;
 }
 
@@ -57,7 +57,7 @@ FragTrap::~FragTrap()
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mArgh arghargh death gurgle gurglegurgle ";
 	std::cout << "urgh... death.\033[0m\"" << std::endl;
-	std::cout << getName() << " have beed destroyed";
+	std::cout << getName() << " (FragTrap) have beed destroyed";
 	std::cout << std::endl;
 }
 
@@ -115,26 +115,6 @@ void	FragTrap::repair()
 		setEnergyPoint(getEnergyPoint() -1);
 		beRepaired(getRepairValue());
 	}
-}
-
-void	FragTrap::takeDamage(unsigned int amount)
-{
-	setHitPoint(getHitPoint() - amount);
-	std::cout << getName() << " : \"";
-	std::cout << "\033[0;35mMy robotic flesh! AAHH!\033[0m\"";
-	std::cout << std::endl;
-	std::cout << getName() << " take \033[0;31m" << amount;
-	std::cout << "\033[0m hit point!" << std::endl;
-}
-
-void	FragTrap::beRepaired(unsigned int amount)
-{
-	setHitPoint(getHitPoint() + amount);
-	std::cout << getName() << " : \"";
-	std::cout << "\033[0;35mI found health!\033[0m\"";
-	std::cout << std::endl;
-	std::cout << getName() << " is repaired for \033[0;32m";
-	std::cout << amount << "\033[0m hit point!" << std::endl;
 }
 
 void	FragTrap::highFivesGuys()
