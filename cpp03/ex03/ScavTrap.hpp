@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/06/17 15:52:11 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/08 13:41:43 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ class ScavTrap : virtual public ClapTrap
 		/* ****************************************************************** */
 		void	attack(const std::string& target);
 		void	repair();
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
 		void	guardGate();
 
 };//!ScavTrap
