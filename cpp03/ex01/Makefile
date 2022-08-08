@@ -6,15 +6,15 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2022/05/17 18:22:03 by cmaginot         ###   ########.fr        #
+#    Updated: 2022/08/08 18:01:37 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=scavTrap
+NAME=clapTrap
 
-SRCS=main.cpp ScavTrap.cpp ClapTrap.cpp
+SRCS=main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJS=$(SRCS:.cpp=.o)
-INCLUDES=ScavTrap.hpp ClapTrap.cpp
+INCLUDES=ClapTrap.hpp ScavTrap.cpp
 
 CC=clang++
 CFLAGS=-Wall -Wextra -Werror -std=c++98 -g3
@@ -26,7 +26,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
 
-%.o: %.c
+%.o: %.cpp
 	$(CC) -c $(CFLAGS) -o $@ $< -I $(INCLUDES)
 
 clean:
@@ -35,5 +35,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean all
+re: fclean 
+	make all
 	

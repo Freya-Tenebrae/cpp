@@ -6,13 +6,13 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 18:54:35 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/08 17:58:07 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-int main(int argc, char const *argv[])
+int main()
 {
 	// ClapTrap c1("Arik");
 	// ClapTrap c2("Mummius");
