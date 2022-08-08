@@ -12,6 +12,16 @@ cpp 02 : [![cmaginot's 42 CPP Module 02 Score](https://badge42.vercel.app/api/v2
 
 cpp 03 : [![cmaginot's 42 CPP Module 03 Score](https://badge42.vercel.app/api/v2/cl1s5sord008509mlo7xr33zy/project/2592086)](https://github.com/JaeSeoKim/badge42)
 
+cpp 04 : 
+
+cpp 05 : 
+
+cpp 06 : 
+
+cpp 07 : 
+
+cpp 08 : 
+
 ## Cloning
 
 ```shell
