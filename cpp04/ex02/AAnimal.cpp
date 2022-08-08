@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 20:38:53 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/08 16:38:01 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ AAnimal::AAnimal():_type("none")
 	std::cout << "\033[0;35mAn Abstract Animal is created\033[0m" << std::endl;
 }
 
-AAnimal::AAnimal(const AAnimal &Aanimal)
+AAnimal::AAnimal(const AAnimal &aAnimal)
 {
-	(*this) = Aanimal;
+	(*this) = aAnimal;
 	std::cout << "\033[0;35mAn Abstract Animal is copied\033[0m" << std::endl;
 }
 
@@ -33,11 +33,11 @@ AAnimal::~AAnimal()
 	std::cout << "\033[0;35mAn Abstract Animal is destroyed\033[0m" << std::endl;
 }
 
-AAnimal &AAnimal::operator=(const AAnimal &Aanimal)
+AAnimal &AAnimal::operator=(const AAnimal &aAnimal)
 {
 	std::cout << "\033[0;35mAn Abstract Animal is copied (operator =)\033[0m";
 	std::cout << std::endl;
-	this->setType(Aanimal.getType());
+	this->setType(aAnimal.getType());
 	return (*this);
 }
 
