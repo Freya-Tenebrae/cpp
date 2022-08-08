@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 19:26:35 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/08 17:51:51 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 /* ************************************************************************** */
 /* CONSTRUCTOR & DESTRUCTOR                                                   */
 /* ************************************************************************** */
-ClapTrap::ClapTrap():_name("Nameless Claptrap")
+ClapTrap::ClapTrap():_name("Nameless Claptrap"),
+					_hitPoint(10),
+					_energyPoint(10),
+					_attackDamage(0),
+					_repairValue(1)
 {
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mMinion?\033[0m\"" << std::endl;
@@ -34,7 +38,11 @@ ClapTrap::ClapTrap(const ClapTrap &clapTrap)
 	std::cout << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string name):_name(name)
+ClapTrap::ClapTrap(const std::string name):_name(name),
+					_hitPoint(10),
+					_energyPoint(10),
+					_attackDamage(0),
+					_repairValue(1)
 {
 	std::cout << getName() << " : \"";
 	std::cout << "\033[0;35mMinion!\033[0m\"" << std::endl;
@@ -54,27 +62,27 @@ ClapTrap::~ClapTrap()
 /* ************************************************************************** */
 /* GETTER & SETTER                                                            */
 /* ************************************************************************** */
-std::string const	ClapTrap::getName()
+std::string	ClapTrap::getName() const
 {
 	return(_name);
 }
 
-int const	ClapTrap::getHitPoint()
+int	ClapTrap::getHitPoint() const
 {
 	return(_hitPoint);
 }
 
-int const	ClapTrap::getEnergyPoint()
+int	ClapTrap::getEnergyPoint() const
 {
 	return(_energyPoint);
 }
 
-int const	ClapTrap::getAttackDamage()
+int	ClapTrap::getAttackDamage() const
 {
 	return(_attackDamage);
 }
 
-int const	ClapTrap::getRepairValue()
+int	ClapTrap::getRepairValue() const
 {
 	return(_repairValue);
 }
