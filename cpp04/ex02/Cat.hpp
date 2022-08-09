@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 20:25:00 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 15:54:37 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ class Cat : public AAnimal
 		Cat();
 		Cat(const Cat &cat);
 		~Cat();
-		virtual Cat			&operator=(const Cat &cat);
+		Cat			&operator=(const Cat &cat);
 
-		virtual std::string const	getIdea(int i)const;
-		virtual void				setIdea(std::string const idea, int i);
+		std::string const	getIdea(int i)const;
+		void				setIdea(std::string const idea, int i);
 
 		virtual void	makeSound()const;
 

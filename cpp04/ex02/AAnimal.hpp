@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 20:32:27 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 15:54:54 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ class AAnimal
 		AAnimal();
 		AAnimal(const AAnimal &animal);
 		virtual ~AAnimal();
-		virtual AAnimal		&operator=(const AAnimal &animal);
+		AAnimal		&operator=(const AAnimal &animal);
 
-		virtual std::string const	getType()const;
-		virtual void				setType(std::string const type);
+		std::string const	getType()const;
+		void				setType(std::string const type);
 
 		virtual void		makeSound()const = 0;
 
