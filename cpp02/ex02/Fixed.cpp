@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/16 18:13:48 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 14:59:10 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,32 +117,32 @@ Fixed &Fixed::operator=(const Fixed &f)
 	return (*this);
 }
 
-bool const	Fixed::operator>(const Fixed &f)
+bool	Fixed::operator>(const Fixed &f)
 {
 	return (_rawBits > f.getRawBits());
 }
 
-bool const	Fixed::operator<(const Fixed &f)
+bool	Fixed::operator<(const Fixed &f)
 {
 	return (_rawBits < f.getRawBits());
 }
 
-bool const	Fixed::operator>=(const Fixed &f)
+bool	Fixed::operator>=(const Fixed &f)
 {
 	return (_rawBits >= f.getRawBits());
 }
 
-bool const	Fixed::operator<=(const Fixed &f)
+bool	Fixed::operator<=(const Fixed &f)
 {
 	return (_rawBits <= f.getRawBits());
 }
 
-bool const	Fixed::operator==(const Fixed &f)
+bool	Fixed::operator==(const Fixed &f)
 {
 	return (_rawBits == f.getRawBits());
 }
 
-bool const	Fixed::operator!=(const Fixed &f)
+bool	Fixed::operator!=(const Fixed &f)
 {
 	return (_rawBits != f.getRawBits());
 }

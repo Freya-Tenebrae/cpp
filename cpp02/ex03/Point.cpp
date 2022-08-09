@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 18:39:27 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/16 20:13:02 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 15:12:30 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ Fixed const	Point::gety() const
 /* ************************************************************************** */
 Point &Point::operator=(const Point &p)
 {
+	(void)p;
 	return (*this);
 }
 

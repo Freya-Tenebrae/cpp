@@ -6,13 +6,13 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:35 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/16 16:20:43 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 14:56:28 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int main(int argc, char const *argv[])
+int main()
 {
 	Fixed a;
 	Fixed const b(10);

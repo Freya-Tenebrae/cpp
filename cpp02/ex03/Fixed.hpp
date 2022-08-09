@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/16 18:44:48 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 14:58:52 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,24 +53,24 @@ class Fixed
 		/* ****************************************************************** */
 		/* OPERATOR OVERLOADING                                               */
 		/* ****************************************************************** */
-		Fixed		&operator=(const Fixed &f);
+		Fixed	&operator=(const Fixed &f);
 
-		bool const	operator>(const Fixed &f);
-		bool const	operator<(const Fixed &f);
-		bool const	operator>=(const Fixed &f);
-		bool const	operator<=(const Fixed &f);
-		bool const	operator==(const Fixed &f);
-		bool const	operator!=(const Fixed &f);
+		bool 	operator>(const Fixed &f);
+		bool 	operator<(const Fixed &f);
+		bool 	operator>=(const Fixed &f);
+		bool 	operator<=(const Fixed &f);
+		bool 	operator==(const Fixed &f);
+		bool 	operator!=(const Fixed &f);
 
-		Fixed		operator+(const Fixed &f);
-		Fixed		operator-(const Fixed &f);
-		Fixed		operator*(const Fixed &f);
-		Fixed		operator/(const Fixed &f);
+		Fixed	operator+(const Fixed &f);
+		Fixed	operator-(const Fixed &f);
+		Fixed	operator*(const Fixed &f);
+		Fixed	operator/(const Fixed &f);
 
-		Fixed		operator++();
-		Fixed		operator++(int);
-		Fixed		operator--();
-		Fixed		operator--(int);
+		Fixed	operator++();
+		Fixed	operator++(int);
+		Fixed	operator--();
+		Fixed	operator--(int);
 };//!Fixed
 
 std::ostream	&operator<<(std::ostream &output, const Fixed &f);

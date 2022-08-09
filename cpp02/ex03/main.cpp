@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 14:28:42 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 15:01:13 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ std::string	printTF(bool value)
 	return (output);
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
 
 	Point t1(1, 1);
