@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/17 18:50:45 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/08 17:51:10 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ class ClapTrap
 {
 	private:
 		std::string	_name;
-		int			_hitPoint = 10;
-		int			_energyPoint = 10;
-		int			_attackDamage = 0;
-		int			_repairValue = 1;
+		int			_hitPoint;
+		int			_energyPoint;
+		int			_attackDamage;
+		int			_repairValue;
 
 	public:
 		/* ****************************************************************** */
@@ -37,11 +37,11 @@ class ClapTrap
 		/* ****************************************************************** */
 		/* GETTER & SETTER                                                    */
 		/* ****************************************************************** */
-		std::string const	getName();
-		int const			getHitPoint();
-		int const			getEnergyPoint();
-		int const			getAttackDamage();
-		int const			getRepairValue();
+		std::string 		getName() const;
+		int 				getHitPoint() const;
+		int 				getEnergyPoint() const;
+		int 				getAttackDamage() const;
+		int 				getRepairValue() const;
 		void				setName(std::string const name);
 		void				setHitPoint(int const hitPoint);
 		void				setEnergyPoint(int const energyPoint);

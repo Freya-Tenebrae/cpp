@@ -6,13 +6,13 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/06/17 16:06:29 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 14:02:12 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-int main(int argc, char const *argv[])
+int main()
 {
 	// ClapTrap c1("Arik");
 	// ClapTrap c2("Mummius");
