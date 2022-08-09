@@ -6,7 +6,7 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2022/07/26 20:29:19 by cmaginot         ###   ########.fr        #
+#    Updated: 2022/08/09 15:26:54 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,20 +14,21 @@ NAME=animal
 
 SRCS=main.cpp AAnimal.cpp Cat.cpp Dog.cpp Brain.cpp
 OBJS=$(SRCS:.cpp=.o)
-INCLUDES=AAnimal.hpp Cat.hpp Dog.hpp Brain.hpp
+INCS=AAnimal.hpp Cat.hpp Dog.hpp Brain.hpp
 
 CC=clang++
 CFLAGS=-Wall -Wextra -Werror -std=c++98 -g3
+INCLUDES=$(addprefix -I , $(INCS))
 
 RM=rm -f
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) $^ -o $@
 
-%.o: %.c
-	$(CC) -c $(CFLAGS) -o $@ $< -I $(INCLUDES)
+%.o: %.cpp
+	$(CC) -c $(CFLAGS) $(INCLUDES) $< -o $@
 
 clean:
 	$(RM) $(OBJS)
@@ -35,5 +36,5 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean all
-	
+re: fclean 
+	make all

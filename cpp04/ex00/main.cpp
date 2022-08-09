@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 14:57:56 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 15:23:33 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-int main(int argc, char const *argv[])
+int main()
 {
 	const Animal* meta = new Animal();
 	const Animal* c = new Cat();

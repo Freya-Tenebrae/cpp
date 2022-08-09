@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 20:13:19 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 15:25:18 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-int main(int argc, char const *argv[])
+int main()
 {
 	std::cout << "\033[1;36mPrevious test :\033[0m" << std::endl;
 	const Animal* meta = new Animal();
