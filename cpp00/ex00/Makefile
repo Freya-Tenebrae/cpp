@@ -6,7 +6,7 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2022/08/09 14:10:09 by cmaginot         ###   ########.fr        #
+#    Updated: 2022/08/09 14:28:11 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@
 
 %.o: %.cpp
-	$(CC) -c $(CFLAGS) $(INCLUDES) $< -o $@
+	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
 	$(RM) $(OBJS)
