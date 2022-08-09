@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 15:59:33 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/08 16:54:40 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 17:30:48 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,17 @@ class AMateria
 
 	public:
 		AMateria();
-		AMateria(std::string const & type);
+		// AMateria(std::string const & type);
 		AMateria(const AMateria &aMateria);
 		virtual ~AMateria();
-		virtual AMateria		&operator=(const AMateria &aMateria);
+		AMateria		&operator=(const AMateria &aMateria);
 
 		std::string const &		getType() const;
 		void					setType(std::string const type);
 		
-		// virtual AMateria* clone() const = 0;
-		// virtual void use(ICharacter& target);
+		virtual AMateria* clone() const = 0;
+		virtual void use(/*ICharacter& target*/) const = 0;
 
 };//!AMateria
-/* ************************************************************************** */
-/* OPERATOR OVERLOADING                                                       */
-/* ************************************************************************** */
 
 #endif

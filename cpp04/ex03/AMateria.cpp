@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 15:59:33 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/08 16:52:01 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 17:30:48 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ AMateria::AMateria():_type("empty")
 	std::cout << "\033[0;35mAn Abstract empty Materia is created\033[0m" << std::endl;
 }
 
-AMateria::AMateria(std::string const & type):_type(type)
-{
-	std::cout << "\033[0;35mAn Abstract Materia is created\033[0m" << std::endl;
-}
+// AMateria::AMateria(std::string const & type):_type(type)
+// {
+// 	std::cout << "\033[0;35mAn Abstract Materia is created\033[0m" << std::endl;
+// }
 
 AMateria::AMateria(const AMateria &aMateria)
 {
@@ -59,9 +59,3 @@ void	AMateria::setType(std::string const type)
 {
 	_type = type;
 }
-
-/* ************************************************************************** */
-/* GETTER & SETTER                                                            */
-/* ************************************************************************** */
-// virtual AMateria* clone() const = 0;
-// virtual void use(ICharacter& target);

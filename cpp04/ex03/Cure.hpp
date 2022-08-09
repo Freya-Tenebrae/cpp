@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 15:59:43 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/08 16:47:17 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 16:38:14 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,14 @@ class Cure : public AMateria
 {
 	public:
 		Cure();
-		Cure(const Cat &cat);
+		// Cure(std::string const & type);
+		Cure(const Cure &cure);
 		~Cure();
-		virtual Cure			&operator=(const Cat &cat);
+		Cure			&operator=(const Cure &cure);
 
-};//!Animal
+		virtual AMateria* clone() const;
+		virtual void use(/*ICharacter& target*/) const;
+
+};//!Cure
+
+#endif

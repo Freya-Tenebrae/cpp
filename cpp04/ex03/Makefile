@@ -6,28 +6,29 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2022/08/08 16:04:06 by cmaginot         ###   ########.fr        #
+#    Updated: 2022/08/09 15:31:50 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=animal
+NAME=materia
 
-SRCS=main.cpp AMateria.cpp
+SRCS=main.cpp AMateria.cpp Cure.cpp Ice.cpp
 OBJS=$(SRCS:.cpp=.o)
-INCLUDES=AMateria.hpp
+INCS=AMateria.hpp Cure.hpp Ice.hpp
 
 CC=clang++
 CFLAGS=-Wall -Wextra -Werror -std=c++98 -g3
+INCLUDES=$(addprefix -I , $(INCS))
 
 RM=rm -f
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) $^ -o $@
 
-%.o: %.c
-	$(CC) -c $(CFLAGS) -o $@ $< -I $(INCLUDES)
+%.o: %.cpp
+	$(CC) -c $(CFLAGS) $(INCLUDES) $< -o $@
 
 clean:
 	$(RM) $(OBJS)
@@ -35,5 +36,5 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean all
-	
+re: fclean 
+	make all
