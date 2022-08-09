@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:45:33 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/12 12:44:57 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 14:53:14 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ class Harl
 		static int	const	_nComplain = 4;
 		t_complain			_complain[4];
 
-		void		debug(void);
-		void		info(void);
-		void		warning(void);
-		void		error(void);
-		int	const	getNumberedLevel(std::string level);
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
+		int		getNumberedLevel(std::string level);
 
 	public:
 		Harl();

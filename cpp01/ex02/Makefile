@@ -6,7 +6,7 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2022/05/09 16:29:55 by cmaginot         ###   ########.fr        #
+#    Updated: 2022/08/09 14:29:23 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,20 +14,21 @@ NAME=brain
 
 SRCS=main.cpp
 OBJS=$(SRCS:.cpp=.o)
-#INCLUDES=
+#INCS=
 
 CC=clang++
 CFLAGS=-Wall -Wextra -Werror -std=c++98 -g3
+#INCLUDES=$(addprefix -I , $(INCS))
 
 RM=rm -f
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) $^ -o $@
 
-%.o: %.c
-	$(CC) -c $(CFLAGS) -o $@ $< #-I $(INCLUDES)
+%.o: %.cpp
+	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
 	$(RM) $(OBJS)
@@ -35,5 +36,5 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean all
-	
+re: fclean 
+	make all

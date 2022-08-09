@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:45:33 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/11 10:55:42 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 14:49:47 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ Switch::~Switch()
 
  bool Switch::fill_buffer(std::string *buffer)
 {
-	std::ifstream	ifs(_filename);
+	std::ifstream	ifs(const_cast<char*>(_filename.c_str()), \
+															std::ifstream::in);
 	std::string		line;
 
 	if (ifs.is_open())
@@ -64,7 +65,12 @@ void	Switch::switching(std::string *buffer)
 
 void	Switch::createNew_file(std::string buffer)
 {
-	std::ofstream	ofs("new_" + _filename);
+	std::string newFilename = "new_";
+	newFilename.append(_filename);
+
+	std::ofstream	ofs(const_cast<char*>(newFilename.c_str()), \
+														std::ofstream::out);
+
 	if (ofs.is_open())
 	{
 		ofs << buffer;

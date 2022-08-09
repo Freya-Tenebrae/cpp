@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:45:33 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/12 13:00:08 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 14:53:25 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	Harl::error()
 	std::cout << "\033[0m" << std::endl << std::endl;
 }
 
-int const	Harl::getNumberedLevel(std::string level)
+int	Harl::getNumberedLevel(std::string level)
 {
 	for (int i = 0; i < _nComplain; i++)
 	{
