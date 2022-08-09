@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:59:21 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/05/06 15:22:40 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/09 14:20:56 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <iomanip>
+# include <sstream>
 # include "Contact.hpp"
 
 class PhoneBook
