@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/10 15:57:28 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/10 16:11:54 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include "Ice.hpp"
 #include "IMateriaSource.hpp"
 #include "MateriaSource.hpp"
+#include "ICharacter.hpp"
+#include "Character.hpp"
 
 void materiaTests()
 {
@@ -120,7 +122,7 @@ void materiaSourceTests()
 	else
 		m4->use();
 	std::cout << std::endl;
-	
+
 	std::cout << "\033[0;36m    Delete objects :\033[0m" << std::endl;
 	delete c;
 	delete i;

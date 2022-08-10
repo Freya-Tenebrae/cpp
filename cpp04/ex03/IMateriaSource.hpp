@@ -6,10 +6,9 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 17:54:33 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/10 14:35:43 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/10 16:11:01 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef IMATERIASOURCE_HPP
 # define IMATERIASOURCE_HPP
