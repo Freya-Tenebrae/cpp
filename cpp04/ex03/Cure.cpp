@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:07:50 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/09 16:57:59 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/10 15:49:33 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 Cure::Cure()
 {
-	this->setType("Cure");
+	this->setType("cure");
 	std::cout << "\033[0;35mAn Cure Materia is created\033[0m" << std::endl;
 }
 
@@ -57,5 +57,6 @@ AMateria* Cure::clone() const
 
 void Cure::use(/*ICharacter& target*/) const
 {
-	std::cout << "\033[0;32mCure\033[0;0m : heals <name>’s wounds" << std::endl;
+	std::cout << "\033[0;32m" << this->getType();
+	std::cout << "\033[0;0m : heals <name>’s wounds" << std::endl;
 }

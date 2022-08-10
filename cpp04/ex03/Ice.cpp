@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:07:53 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/09 16:58:31 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/10 15:49:28 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 Ice::Ice()
 {
-	this->setType("Ice");
+	this->setType("ice");
 	std::cout << "\033[0;35mAn Ice Materia is created\033[0m" << std::endl;
 }
 
@@ -57,5 +57,6 @@ AMateria* Ice::clone() const
 
 void Ice::use(/*ICharacter& target*/) const
 {
-	std::cout << "\033[0;96mIce\033[0;0m  : shoots an ice bolt at <name>" << std::endl;
+	std::cout << "\033[0;96m" << this->getType();
+	std::cout << "\033[0;0m : shoots an ice bolt at <name>" << std::endl;
 }
