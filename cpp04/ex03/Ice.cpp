@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:07:53 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/10 15:49:28 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/10 18:39:21 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,9 @@ AMateria* Ice::clone() const
 	return (ice);
 }
 
-void Ice::use(/*ICharacter& target*/) const
+void Ice::use(ICharacter& target) const
 {
 	std::cout << "\033[0;96m" << this->getType();
-	std::cout << "\033[0;0m : shoots an ice bolt at <name>" << std::endl;
+	std::cout << "\033[0;0m : shoots an ice bolt at \033[0;31m";
+	std::cout << target.getName() << "\033[0;0m" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 15:59:33 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/09 17:30:48 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/10 18:44:27 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <string>
 # include <iostream>
+
+class ICharacter;
 
 class AMateria
 {
@@ -32,7 +34,7 @@ class AMateria
 		void					setType(std::string const type);
 		
 		virtual AMateria* clone() const = 0;
-		virtual void use(/*ICharacter& target*/) const = 0;
+		virtual void use(ICharacter& target) const = 0;
 
 };//!AMateria
 

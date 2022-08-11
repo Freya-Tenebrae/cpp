@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 15:59:41 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/09 16:38:19 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/10 18:26:10 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define ICE_HPP
 
 #include "AMateria.hpp"
-
+#include "ICharacter.hpp"
 
 class Ice : public AMateria
 {
@@ -26,7 +26,7 @@ class Ice : public AMateria
 		Ice			&operator=(const Ice &ice);
 
 		virtual AMateria* clone() const;
-		virtual void use(/*ICharacter& target*/) const;
+		virtual void use(ICharacter& target) const;
 
 };//!Ice
 
