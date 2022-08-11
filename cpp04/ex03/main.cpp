@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/11 14:37:22 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/11 15:37:06 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -215,7 +215,6 @@ void playerTests()
 
 int main()
 {
-	std::cout << "\033[0;31mColor\033[0;0m" << std::endl;
 	materiaTests();
 	materiaSourceTests();
 	playerTests();
