@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/09 15:25:18 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/11 14:44:48 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int main()
 	std::cout << std::endl << "\033[1;36mBrain test :\033[0m" << std::endl;
 	Brain* b = new Brain();
 	Cat* cat = new Cat();
+	Cat* cat2 = new Cat();
 
 
 	b->setIdea("makeSound", 1);
@@ -56,8 +57,18 @@ int main()
 	std::cout << "Cat idea 66      : " << cat->getIdea(66) << std::endl;
 	std::cout << "Cat wrong idea   : " << cat->getIdea(111) << std::endl;
 
+	std::cout << std::endl;
+	*cat2 = *cat;
+	std::cout << "Cat wrong idea   : " << cat2->getIdea(-4) << std::endl;
+	std::cout << "Cat idea 1       : " << cat2->getIdea(1) << std::endl;
+	std::cout << "Cat wrong idea   : " << cat2->getIdea(11) << std::endl;
+	std::cout << "Cat idea 42      : " << cat2->getIdea(42) << std::endl;
+	std::cout << "Cat idea 66      : " << cat2->getIdea(66) << std::endl;
+	std::cout << "Cat wrong idea   : " << cat2->getIdea(111) << std::endl;
+
 	delete b;
 	delete cat;
+	delete cat2;
 
 	std::cout << std::endl << "\033[1;36mWith a table :\033[0m" << std::endl;
 
