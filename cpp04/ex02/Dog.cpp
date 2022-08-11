@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 19:04:10 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/11 14:56:19 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,23 @@ Dog &Dog::operator=(const Dog &dog)
 	std::cout << "\033[0;35mA Dog is copied (operator =)\033[0m";
 	std::cout << std::endl;
 	this->setType(dog.getType());
+	this->setBrain(dog.getBrain());
 	return (*this);
 }
 
 /* ************************************************************************** */
 /* GETTER & SETTER                                                            */
 /* ************************************************************************** */
+
+Brain const	*Dog::getBrain()const
+{
+	return (_brain);
+}
+
+void	Dog::setBrain(const Brain *brain)
+{
+	*_brain = *brain;
+}
 
 std::string const	Dog::getIdea(int i)const
 {

@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/07/26 19:04:07 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/11 14:56:28 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,24 @@ Cat &Cat::operator=(const Cat &cat)
 	std::cout << "\033[0;35mA Cat is copied (operator =)\033[0m";
 	std::cout << std::endl;
 	this->setType(cat.getType());
+	this->setBrain(cat.getBrain());
 	return (*this);
 }
 
 /* ************************************************************************** */
 /* GETTER & SETTER                                                            */
 /* ************************************************************************** */
+
+
+Brain const	*Cat::getBrain()const
+{
+	return (_brain);
+}
+
+void	Cat::setBrain(const Brain *brain)
+{
+	*_brain = *brain;
+}
 
 std::string const	Cat::getIdea(int i)const
 {
@@ -56,7 +68,6 @@ void	Cat::setIdea(std::string const idea, int i)
 {
 	_brain->setIdea(idea, i);
 }
-
 
 /* ************************************************************************** */
 /* MEMBER FUNCTION                                                            */

@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/09 15:54:45 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/11 14:56:05 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class Dog : public AAnimal
 		~Dog();
 		Dog					&operator=(const Dog &dog);
 
+		Brain const			*getBrain()const;
+		void				setBrain(const Brain *brain);
 		std::string const	getIdea(int i)const;
 		void				setIdea(std::string const idea, int i);
 
