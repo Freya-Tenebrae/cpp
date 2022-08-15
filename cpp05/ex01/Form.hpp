@@ -1,50 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/13 16:35:27 by cmaginot         ###   ########.fr       */
+/*   Created: 2022/08/13 16:31:13 by cmaginot          #+#    #+#             */
+/*   Updated: 2022/08/14 22:01:13 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#ifndef FORM_HPP
+# define FORM_HPP
 
 # include <string>
 # include <iostream>
 
-class Bureaucrat
+# include "Bureaucrat.hpp"
+
+class Bureaucrat;
+
+class Form
 {
 	private:
 		const std::string	_name;
-		int					_grade;
+		bool				_isSigned;
+		const int			_gradeToBeSigned;
+		const int			_gradeToBeExecuted;
 	public:
 		/* ****************************************************************** */
 		/* CONSTRUCTOR & DESTRUCTOR                                           */
 		/* ****************************************************************** */
-		Bureaucrat(std::string name, int grade);
-		Bureaucrat(const Bureaucrat &b);
-		~Bureaucrat();
+		Form(std::string name, int gradeToBeSigned, int gradeToBeExecuted);
+		Form(const Form &f);
+		~Form();
 
 		/* ****************************************************************** */
 		/* GETTER & SETTER                                                    */
 		/* ****************************************************************** */
 		std::string	getName(void) const;
-		int			getGrade(void) const;
+		int			getGradeToBeSigned(void) const;
+		int			getGradeToBeExecuted(void) const;
+		bool		getIsSigned(void) const;
 
 		/* ****************************************************************** */
 		/* MEMBER FUNCTION                                                    */
 		/* ****************************************************************** */
-		void		Promoted();
-		void		Demoted();
+		void		beSigned(const Bureaucrat &b);
 
 		/* ****************************************************************** */
 		/* OPERATOR OVERLOADING                                               */
 		/* ****************************************************************** */
-		Bureaucrat	&operator=(const Bureaucrat &f);
+		Form		&operator=(const Form &f);
 		/* ****************************************************************** */
 		/* MISCELLANEOUS                                                      */
 		/* ****************************************************************** */
@@ -59,11 +66,15 @@ class Bureaucrat
 			public:
 				virtual const char* what() const throw();
 		};//!GradeTooLowException
-
-};//!Bureaucrat
+		class AlreadySignedException : std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};//!AlreadySignedException
+};//!Form
 /* ************************************************************************** */
 /* OPERATOR OVERLOADING                                                       */
 /* ************************************************************************** */
-std::ostream	&operator<<(std::ostream &output, const Bureaucrat &b);
+std::ostream	&operator<<(std::ostream &output, const Form &f);
 
 #endif

@@ -1,69 +1,65 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/13 16:35:27 by cmaginot         ###   ########.fr       */
+/*   Created: 2022/08/15 00:09:56 by cmaginot          #+#    #+#             */
+/*   Updated: 2022/08/15 02:11:10 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#ifndef Intern_HPP
+# define Intern_HPP
 
 # include <string>
 # include <iostream>
 
-class Bureaucrat
+# include "ShrubberyCreationForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "PresidentialPardonForm.hpp"
+
+class Intern
 {
-	private:
-		const std::string	_name;
-		int					_grade;
 	public:
 		/* ****************************************************************** */
 		/* CONSTRUCTOR & DESTRUCTOR                                           */
 		/* ****************************************************************** */
-		Bureaucrat(std::string name, int grade);
-		Bureaucrat(const Bureaucrat &b);
-		~Bureaucrat();
-
-		/* ****************************************************************** */
-		/* GETTER & SETTER                                                    */
-		/* ****************************************************************** */
-		std::string	getName(void) const;
-		int			getGrade(void) const;
+		Intern();
+		Intern(const Intern &b);
+		~Intern();
 
 		/* ****************************************************************** */
 		/* MEMBER FUNCTION                                                    */
 		/* ****************************************************************** */
-		void		Promoted();
-		void		Demoted();
+		AForm	*makePresidentialPardonForm(const std::string target);
+		AForm	*makeRobotomyRequestForm(const std::string target);
+		AForm	*makeShrubberyCreationForm(const std::string target);
+		AForm	*makeForm(const std::string formName, const std::string target);
 
 		/* ****************************************************************** */
 		/* OPERATOR OVERLOADING                                               */
 		/* ****************************************************************** */
-		Bureaucrat	&operator=(const Bureaucrat &f);
+		Intern	&operator=(const Intern &f);
+
 		/* ****************************************************************** */
 		/* MISCELLANEOUS                                                      */
 		/* ****************************************************************** */
-		class GradeTooHighException : std::exception
+		class FormDidntExistException : std::exception
 		{
 			public:
 				virtual const char* what() const throw();
 		};//!GradeTooHighException
-
-		class GradeTooLowException : std::exception
-		{
-			public:
-				virtual const char* what() const throw();
-		};//!GradeTooLowException
-
-};//!Bureaucrat
+};//!Intern
 /* ************************************************************************** */
 /* OPERATOR OVERLOADING                                                       */
 /* ************************************************************************** */
-std::ostream	&operator<<(std::ostream &output, const Bureaucrat &b);
+
+typedef struct	s_forms
+{
+	std::string	formName;
+	AForm	*(Intern::*makeForms)(const std::string target);
+}				t_forms;
 
 #endif

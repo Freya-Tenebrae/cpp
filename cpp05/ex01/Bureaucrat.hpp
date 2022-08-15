@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/13 16:35:27 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/13 17:31:01 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <string>
 # include <iostream>
+
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -40,6 +44,7 @@ class Bureaucrat
 		/* ****************************************************************** */
 		void		Promoted();
 		void		Demoted();
+		void		signForm(Form &f);
 
 		/* ****************************************************************** */
 		/* OPERATOR OVERLOADING                                               */

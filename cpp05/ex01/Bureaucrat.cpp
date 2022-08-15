@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/13 16:38:29 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/15 02:46:56 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,21 @@ Bureaucrat::Bureaucrat(std::string name, int grade):_name(name)
 	else if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
 	_grade = grade;
-	std::cout << "\033[0;35mA Bureaucrat named " << _name << " with the grade ";
-	std::cout << _grade << " is recruited\033[0m" << std::endl;
+	std::cout << "\033[0;35mA Bureaucrat named " << _name;
+	std::cout << " is recruited\033[0m" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &b):_name(b.getName())
 {
 	(*this) = b;
-	std::cout << "\033[0;35mA Bureaucrat named " << _name << " with the grade ";
-	std::cout << _grade << " is cloned\033[0m" << std::endl;
+	std::cout << "\033[0;35mA Bureaucrat named " << _name;
+	std::cout << " is cloned\033[0m" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "\033[0;35mA Bureaucrat named " << _name << " with the grade ";
-	std::cout << _grade << " is fired\033[0m" << std::endl;
+	std::cout << "\033[0;35mA Bureaucrat named " << _name;
+	std::cout << " is fired\033[0m" << std::endl;
 }
 
 /* ************************************************************************** */
@@ -61,21 +61,36 @@ void	Bureaucrat::Promoted()
 {
 	if (_grade <= 1)
 		throw Bureaucrat::GradeTooHighException();
-	std::cout << "A Bureaucrat named " << _name << " with the grade ";
-	std::cout << _grade;
 	_grade--;
-	std::cout << " is promoted, they have now the grade " << _grade << std::endl;
-
+	std::cout << "A Bureaucrat named " << _name << "  is promoted" << std::endl;
 }
 
 void	Bureaucrat::Demoted()
 {
 	if (_grade >= 150)
 		throw Bureaucrat::GradeTooLowException();
-	std::cout << "A Bureaucrat named " << _name << " with the grade ";
-	std::cout << _grade;
 	_grade++;
-	std::cout << " is demoted, they have now the grade " << _grade << std::endl;
+	std::cout << "A Bureaucrat named " << _name << "  is demoted" << std::endl;
+}
+
+void	Bureaucrat::signForm(Form &f)
+{
+	try
+	{
+		f.beSigned(*this);
+		std::cout << "\033[0;33m" << getName() << " signed " << f.getName();
+		std::cout << "\033[0m" << std::endl;
+	}
+	catch (Form::AlreadySignedException &e)
+	{
+		std::cerr << getName() << " couldn't sign " << f.getName();
+		std::cerr << " because " << e.what() << std::endl;
+	}
+	catch (Form::GradeTooLowException &e)
+	{
+		std::cerr << getName() << " couldn't sign " << f.getName();
+		std::cerr << " because " << e.what() << std::endl;
+	}
 }
 
 /* ************************************************************************** */
@@ -94,6 +109,7 @@ Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &b)
 std::ostream	&operator<<(std::ostream &output, const Bureaucrat &b)
 {
 	output << b.getName() << ", bureaucrat grade " << b.getGrade();
+	output << std::endl;
 	return (output);
 
 }

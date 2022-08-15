@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/13 16:35:27 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/13 18:30:42 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <string>
 # include <iostream>
+
+# include "AForm.hpp"
+
+class AForm;
 
 class Bureaucrat
 {
@@ -40,6 +44,8 @@ class Bureaucrat
 		/* ****************************************************************** */
 		void		Promoted();
 		void		Demoted();
+		void		signForm(AForm &f);
+		void		executeForm(AForm const &f);
 
 		/* ****************************************************************** */
 		/* OPERATOR OVERLOADING                                               */
@@ -59,7 +65,6 @@ class Bureaucrat
 			public:
 				virtual const char* what() const throw();
 		};//!GradeTooLowException
-
 };//!Bureaucrat
 /* ************************************************************************** */
 /* OPERATOR OVERLOADING                                                       */
