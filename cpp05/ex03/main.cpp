@@ -89,6 +89,7 @@ int main()
 		delete b2;
 		delete b3;
 		delete b4;
+		delete someRandomIntern;
 	}
 	catch (Bureaucrat::GradeTooHighException &e)
 	{
