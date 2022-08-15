@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/15 02:43:13 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/15 18:37:18 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,17 @@ int main()
 		std::cout << std::endl;
 		form = someRandomIntern->makeForm("presidential pardon", "Jack");
 		tests(b1, b2, b3, b4, form);
+
+		std::cout << "\033[1;36mtests 4 : Intern Wrong tests\033[0m";
+		std::cout << std::endl;
+		try
+		{
+			form = someRandomIntern->makeForm("make cofee", "bureaucrat");
+		}
+		catch (Intern::FormDidntExistException &e)
+		{
+			std::cerr << "Intern exception : " << e.what() << std::endl;
+		}
 
 		std::cout << "\033[1;36mDelete other var\033[0m";
 		std::cout << std::endl;
