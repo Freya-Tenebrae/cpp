@@ -6,11 +6,20 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 18:20:30 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/15 00:06:25 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/15 18:26:20 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+
+RobotomyRequestForm::RobotomyRequestForm():
+										AForm("RobotomyRequestForm", 72, 45),
+										_target("nothing")
+{
+
+	std::cout << "\033[0;35mA RobotomyRequestForm targetting nothing";
+	std::cout << " is created\033[0m" << std::endl;
+}
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target):
 										AForm("RobotomyRequestForm", 72, 45),

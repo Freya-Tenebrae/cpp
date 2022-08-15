@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 18:20:32 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/14 21:21:44 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/15 18:27:17 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class RobotomyRequestForm : public AForm
 		const std::string	_target;
 
 	public:
+		RobotomyRequestForm();
 		RobotomyRequestForm(std::string target);
 		RobotomyRequestForm(const RobotomyRequestForm &f);
 		virtual ~RobotomyRequestForm();

@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 16:31:11 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/14 22:11:38 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/15 18:30:09 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 /* ************************************************************************** */
 /* CONSTRUCTOR & DESTRUCTOR                                                   */
 /* ************************************************************************** */
+
+Form::Form():	_name(""),
+				_isSigned(false),
+				_gradeToBeSigned(75),
+				_gradeToBeExecuted(75)
+{
+	std::cout << "\033[0;35mDefault constructor called. DO NOT USE\033[0m";
+	std::cout << std::endl;
+}
 
 Form::Form(std::string name, int gradeToBeSigned, int gradeToBeExecuted):
 										_name(name),

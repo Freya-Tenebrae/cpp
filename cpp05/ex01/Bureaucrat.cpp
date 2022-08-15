@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/15 02:46:56 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/15 18:19:29 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 /* ************************************************************************** */
 /* CONSTRUCTOR & DESTRUCTOR                                                   */
 /* ************************************************************************** */
+
+Bureaucrat::Bureaucrat():_name(""), _grade(150)
+{
+	std::cout << "\033[0;35mDefault constructor called. DO NOT USE\033[0m";
+	std::cout << std::endl;
+}
 
 Bureaucrat::Bureaucrat(std::string name, int grade):_name(name)
 {

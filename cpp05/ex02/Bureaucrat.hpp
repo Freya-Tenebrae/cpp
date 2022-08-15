@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:47:29 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/13 18:30:42 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/15 18:20:50 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Bureaucrat
 		/* ****************************************************************** */
 		/* CONSTRUCTOR & DESTRUCTOR                                           */
 		/* ****************************************************************** */
+		Bureaucrat();
 		Bureaucrat(std::string name, int grade);
 		Bureaucrat(const Bureaucrat &b);
 		~Bureaucrat();

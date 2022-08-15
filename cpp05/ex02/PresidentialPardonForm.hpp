@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 18:20:51 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/14 21:22:22 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/15 18:27:02 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class PresidentialPardonForm : public AForm
 		const std::string	_target;
 
 	public:
+		PresidentialPardonForm();
 		PresidentialPardonForm(std::string target);
 		PresidentialPardonForm(const PresidentialPardonForm &f);
 		virtual ~PresidentialPardonForm();

@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 16:31:13 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/14 22:05:51 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/08/15 18:24:43 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class AForm
 		/* ****************************************************************** */
 		/* CONSTRUCTOR & DESTRUCTOR                                           */
 		/* ****************************************************************** */
+		AForm();
 		AForm(std::string name, int gradeToBeSigned, int gradeToBeExecuted);
 		AForm(const AForm &f);
 		virtual ~AForm();
