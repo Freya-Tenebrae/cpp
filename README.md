@@ -16,7 +16,7 @@ cpp 04 : [![cmaginot's 42 CPP Module 04 Score](https://badge42.vercel.app/api/v2
 
 cpp 05 : [![cmaginot's 42 CPP Module 05 Score](https://badge42.vercel.app/api/v2/cl1s5sord008509mlo7xr33zy/project/2719955)](https://github.com/JaeSeoKim/badge42)
 
-cpp 06 : 
+cpp 06 : [![cmaginot's 42 CPP Module 06 Score](https://badge42.vercel.app/api/v2/cl1s5sord008509mlo7xr33zy/project/2730155)](https://github.com/JaeSeoKim/badge42)
 
 cpp 07 : 
 
