@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/09/05 07:35:55 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/09/06 15:12:43 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,16 @@ int main(void)
 		std::cout << "\033[0;32mc = \033[0;33m" << c << "\033[0;32m, ";
 		std::cout << "d = \033[0;33m" << d << "\033[0m" << std::endl;
 
-		std::cout << "\033[0;36mTest 2.1 : int swap\033[0m" << std::endl;
+		std::cout << "\033[0;36mTest 2.1 : string swap\033[0m" << std::endl;
 		::swap<std::string>(c, d);
 		std::cout << "\033[0;32mc = \033[0;33m" << c << "\033[0;32m, ";
 		std::cout << "d = \033[0;33m" << d << "\033[0m" << std::endl;
 
-		std::cout << "\033[0;36mTest 2.2 : int min\033[0m" << std::endl;
+		std::cout << "\033[0;36mTest 2.2 : string min\033[0m" << std::endl;
 		std::cout << "\033[0;32mmin( c, d ) = \033[0;33m" << ::min<std::string>(c, d);
 		std::cout << "\033[0m" << std::endl;
 
-		std::cout << "\033[0;36mTest 2.3 : int max\033[0m" << std::endl;
+		std::cout << "\033[0;36mTest 2.3 : string max\033[0m" << std::endl;
 		std::cout << "\033[0;32mmax( c, d ) = \033[0;33m" << ::max<std::string>(c, d);
 		std::cout << "\033[0m" << std::endl;
 	}
@@ -62,16 +62,16 @@ int main(void)
 		std::cout << "\033[0;32me = \033[0;33m" << e << "\033[0;32m, ";
 		std::cout << "f = \033[0;33m" << f << "\033[0m" << std::endl;
 
-		std::cout << "\033[0;36mTest 3.1 : int swap\033[0m" << std::endl;
+		std::cout << "\033[0;36mTest 3.1 : float swap\033[0m" << std::endl;
 		::swap<float>(e, f);
 		std::cout << "\033[0;32me = \033[0;33m" << e << "\033[0;32m, ";
 		std::cout << "f = \033[0;33m" << f << "\033[0m" << std::endl;
 
-		std::cout << "\033[0;36mTest 3.2 : int min\033[0m" << std::endl;
+		std::cout << "\033[0;36mTest 3.2 : float min\033[0m" << std::endl;
 		std::cout << "\033[0;32mmin( e, f ) = \033[0;33m" << ::min<float>(e, f);
 		std::cout << "\033[0m" << std::endl;
 
-		std::cout << "\033[0;36mTest 3.3 : int max\033[0m" << std::endl;
+		std::cout << "\033[0;36mTest 3.3 : float max\033[0m" << std::endl;
 		std::cout << "\033[0;32mmax( e, f ) = \033[0;33m" << ::max<float>(e, f);
 		std::cout << "\033[0m" << std::endl;
 	}

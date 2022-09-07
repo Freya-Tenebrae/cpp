@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/09/05 09:46:55 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/09/06 15:12:27 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(void)
 {
-	std::cout << "\033[1;36m-----Iter tests-----\033[0m" << std::endl;
+	std::cout << "\033[1;36m-----Array tests-----\033[0m" << std::endl;
 	std::cout << "\033[1;36mTest 1 : int\033[0m" << std::endl;
 	{
 		std::cout << "\033[0;36mInit a\033[0m" << std::endl;
