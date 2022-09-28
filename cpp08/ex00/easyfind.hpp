@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/09/06 15:54:29 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/09/27 16:55:10 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string>
 # include <iostream>
 # include <list>
+# include <vector>
 
 class NotFoundException : std::exception
 {
@@ -27,14 +28,17 @@ class NotFoundException : std::exception
 };//!OutException
 
 template <typename T>
-typename T::iterator	&easyfind(const T &t, const int value)
+typename T::const_iterator	easyfind(const T &t, const int value)
 {
-	typename T::iterator itr;
+	typename T::const_iterator itr;
+	typename T::const_iterator itrend = t.end(); //add
 
-	itr = std::find(t.begin(), t.end(), value);
-	if (itr == t.end())
-		throw NotFoundException();
-	return (itr);
+	for (itr = t.begin(); itr != itrend; ++itr)
+    {
+        if (*itr == value)
+            return (itr);
+    }
+    throw NotFoundException();
 }
 
 #endif
