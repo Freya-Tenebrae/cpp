@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:02:54 by cmaginot          #+#    #+#             */
-/*   Updated: 2022/08/11 15:37:06 by cmaginot         ###   ########.fr       */
+/*   Updated: 2022/09/09 04:08:00 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -221,10 +221,3 @@ int main()
 	std::cout << "\033[1;36mEnd of tests\033[0m" << std::endl;
 	return (0);
 }
-
-
-// todo
-/*
-- change IMateriaSources to cpy pointer and not duplicate ?
-- finish ICharacter
-*/
