@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2023/03/15 17:56:06 by cmaginot         ###   ########.fr       */
+/*   Updated: 2023/03/15 18:07:59 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,13 @@ BitcoinExchange::~BitcoinExchange()
 BitcoinExchange	&BitcoinExchange::operator=(const BitcoinExchange &bte)
 {
 	std::map<std::string, double> data;
-	(void)bte;
+	this->_data = bte.get_data();
 	return *this;
+}
+
+std::map<std::string, double>	BitcoinExchange::get_data() const
+{
+	return(this->_data);
 }
 
 double	BitcoinExchange::get_real_value(std::string date, double quantity_value)
