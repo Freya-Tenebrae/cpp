@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2023/03/16 18:03:02 by cmaginot         ###   ########.fr       */
+/*   Updated: 2023/03/16 18:27:24 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,18 +81,18 @@ void	PmergeMe::sort_vector()
 {
 	timespec ts_beg, ts_end;
 	clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts_beg);
-	std::sort(_v.begin(), _v.end()); // to change to templated function
+	merge_insert_sort(_v);
 	clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts_end);
-	_time_vector_sort =  ts_end.tv_nsec - ts_beg.tv_nsec;
+	_time_vector_sort = ts_end.tv_nsec - ts_beg.tv_nsec;
 }
 
 void	PmergeMe::sort_list()
 {
 	timespec ts_beg, ts_end;
 	clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts_beg);
-	_l.sort(); // to change to templated function
+	merge_insert_sort(_l);
 	clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts_end);
-	_time_list_sort =  ts_end.tv_nsec - ts_beg.tv_nsec;
+	_time_list_sort = ts_end.tv_nsec - ts_beg.tv_nsec;
 }
 
 void	PmergeMe::aff_init()

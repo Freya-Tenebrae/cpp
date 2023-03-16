@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2023/03/16 18:00:59 by cmaginot         ###   ########.fr       */
+/*   Updated: 2023/03/16 18:27:25 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,17 @@
 
 #include <algorithm>    // std::sort to delete later
 
-static const size_t npos = -1;
+template <typename T>
+void	merge_insert_sort(T &t)
+{
+	typename T::iterator itr;
+	typename T::iterator itrend = t.end();
+
+	for (itr = t.begin(); itr != itrend; ++itr)
+    {
+        *itr += 1;
+    }
+}
 
 class PmergeMe
 {
