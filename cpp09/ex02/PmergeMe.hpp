@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2023/03/16 18:27:25 by cmaginot         ###   ########.fr       */
+/*   Updated: 2023/03/16 18:28:25 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@
 # include <sstream>
 # include <iomanip>
 # include <time.h>
-
-#include <algorithm>    // std::sort to delete later
 
 template <typename T>
 void	merge_insert_sort(T &t)
