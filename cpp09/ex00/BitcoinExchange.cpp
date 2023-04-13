@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2023/03/15 18:41:24 by cmaginot         ###   ########.fr       */
+/*   Updated: 2023/04/13 13:57:07 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,13 @@ std::map<std::string, double>	BitcoinExchange::get_data() const
 
 double	BitcoinExchange::get_real_value(std::string date, double quantity_value)
 {
-	if (date.find("00", 5) != npos || date.compare(_data.begin()->first) < 0)
+	if (date.find("00", 5) != npos || date.size() != 10 || \
+		date[4] != '-' || date[7] != '-' || \
+		date[5] > '1' || (date[5] == '1' && date[6] > 2) || \
+		date[8] > '3' || (date[8] == '3' && date[9] > 1) || \
+		date.compare(_data.begin()->first) < 0)
 		throw DateInvalidException();
+
 
 	for (std::map<std::string, double>::const_iterator it = _data.begin(); it != _data.end(); )
 	{
