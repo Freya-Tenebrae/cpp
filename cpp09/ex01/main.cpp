@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2023/03/15 19:21:40 by cmaginot         ###   ########.fr       */
+/*   Updated: 2023/04/13 13:47:57 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,10 @@ int main(int argc, char const **argv)
 		std::cout << std::endl;
 	}
 	catch (RPN::InvalidElementException &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	catch (RPN::DivisionByZeroException &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}

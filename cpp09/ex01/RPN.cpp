@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2023/04/04 17:57:05 by cmaginot         ###   ########.fr       */
+/*   Updated: 2023/04/13 13:46:57 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ void	RPN::multiply()
 void	RPN::divide()
 {
 	int value = _st.top();
+	if (value == 0)
+		throw DivisionByZeroException();
 	_st.pop();
 	_st.top() /= value;
 	std::cout << "\033[0;34mdivide\033[0m" << std::endl;
@@ -124,4 +126,9 @@ int		RPN::get_result()
 const char* RPN::InvalidElementException::what() const throw()
 {
 	return ("\033[0;31mError : Element invalid\033[0m");
+}
+
+const char* RPN::DivisionByZeroException::what() const throw()
+{
+	return ("\033[0;31mError : Can't divide by zero\033[0m");
 }

@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2023/03/15 19:00:58 by cmaginot         ###   ########.fr       */
+/*   Updated: 2023/04/13 13:46:31 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,13 @@ class RPN
 		{
 			public:
 				virtual const char* what() const throw();
-		};//!DateInvalidException
+		};//!InvalidElementException
+
+		class DivisionByZeroException : std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};//!DivisionByZeroException
 };//!RPN
 
 
