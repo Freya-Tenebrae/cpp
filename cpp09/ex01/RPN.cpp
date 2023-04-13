@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2023/03/15 19:19:16 by cmaginot         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:57:05 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,9 @@ void	RPN::add_number(int number)
 
 void	RPN::add_operation(char oper)
 {
-	if (oper == '+')
+	if (_st.size() <= 1)
+		throw InvalidElementException();
+	else if (oper == '+')
 		add();
 	else if (oper == '-')
 		substract();
@@ -99,7 +101,7 @@ void	RPN::add_element(std::string element)
 	{
 		for (std::string::iterator it = element.begin(); it != element.end(); it++)
 		{
-			if (*it >= '0' && *it <= '9')
+			if (*it >= '0' && *it <= '9' && !(*(it + 1) >= '0' && *(it + 1) <= '9'))
 				;
 			else
 				throw InvalidElementException();
@@ -114,6 +116,8 @@ void	RPN::add_element(std::string element)
 
 int		RPN::get_result()
 {
+	if (_st.size() != 1)
+		throw InvalidElementException();
 	return (_st.top());
 }
 

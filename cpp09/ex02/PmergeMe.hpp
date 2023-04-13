@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 20:17:02 by cmaginot          #+#    #+#             */
-/*   Updated: 2023/03/16 18:28:25 by cmaginot         ###   ########.fr       */
+/*   Updated: 2023/03/31 17:47:55 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PMERGEME_HPP
 
 # include <vector>
-# include <list>
+# include <deque>
 # include <string>
 # include <iostream>
 # include <fstream>
@@ -23,28 +23,18 @@
 # include <iomanip>
 # include <time.h>
 
-template <typename T>
-void	merge_insert_sort(T &t)
-{
-	typename T::iterator itr;
-	typename T::iterator itrend = t.end();
-
-	for (itr = t.begin(); itr != itrend; ++itr)
-    {
-        *itr += 1;
-    }
-}
-
 class PmergeMe
 {
 	private:
 		std::vector<int>	_v;
-		std::list<int>		_l;
+		std::deque<int>		_d;
 		int					_time_vector_sort;
-		int					_time_list_sort;
+		int					_time_deque_sort;
 
+		void				mi_sort_deque();
+		void				mi_sort_vector();
 		void				sort_vector();
-		void				sort_list();
+		void				sort_deque();
 		void				aff_init();
 		void				aff_result();
 
@@ -58,14 +48,14 @@ class PmergeMe
 		std::vector<int>	get_vector() const;
 		void				set_vector(std::vector<int> v);
 
-		std::list<int>		get_list() const;
-		void				set_list(std::list<int> l);
+		std::deque<int>		get_deque() const;
+		void				set_deque(std::deque<int> d);
 
 		int					get_time_vector_sort() const;
 		void				set_time_vector_sort(int time);
 
-		int					get_time_list_sort() const;
-		void				set_time_list_sort(int time);
+		int					get_time_deque_sort() const;
+		void				set_time_deque_sort(int time);
 
 		void				add_value(int value);
 		void				sort();
